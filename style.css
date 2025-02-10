@@ -1,0 +1,148 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+/* Login Container */
+.login-container {
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    padding: 40px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Instagram Logo */
+.login-container img {
+    width: 175px;
+    margin-bottom: 30px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fafafa;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #a8a8a8;
+}
+
+/* Login Button */
+.login-button {
+    background-color: #0095f6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:disabled {
+    background-color: #b2dffc;
+    cursor: not-allowed;
+}
+
+.login-button:hover:not(:disabled) {
+    background-color: #007bb5;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #dbdbdb;
+}
+
+.divider span {
+    margin: 0 10px;
+}
+
+/* Facebook Login */
+.facebook-login {
+    color: #385185;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+
+.facebook-login:hover {
+    text-decoration: underline;
+}
+
+/* Forgot Password */
+.forgot-password {
+    font-size: 12px;
+    color: #385185;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+.footer a {
+    color: #0095f6;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+    }
+}
