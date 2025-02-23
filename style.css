@@ -1,24 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Instagram-like font */
-}
-
-body {
-    background-color: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #262626;
-}
-
-.login-container {
-    width: 100%;
-    max-width: 350px;
-    padding: 10px;
-}
 
 .login-box {
     background-color: #ffffff;
