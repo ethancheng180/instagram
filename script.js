@@ -3,17 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const email = document.getElementById('email').value;
+        const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
         // Basic validation
-        if (!email || !password) {
-            alert('Please enter both email and password.');
+        if (!username || !password) {
+            alert('Please enter both username and password.');
             return;
         }
 
         // Placeholder for backend integration (e.g., Node.js/Express)
-        console.log('Login attempt:', { email, password });
+        console.log('Login attempt:', { username, password });
         alert('Login functionality would connect to a backend here. Check console for details.');
 
         // Example backend call (uncomment and update API_URL for real integration)
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(`${API_URL}/api/auth/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
+            body: JSON.stringify({ username, password })
         }).then(response => response.json())
           .then(data => alert(data.message))
           .catch(error => alert('Login failed: ' + error.message));
@@ -31,9 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         loginForm.reset();
     });
 
-    // Handle "Sign Up" link click (placeholder)
-    document.querySelector('p a').addEventListener('click', (e) => {
-        e.preventDefault();
-        alert('This would navigate to a signup page or open a signup form. Implement backend for functionality!');
+    // Handle "Sign Up" and "Forgot Password" links (placeholders)
+    document.querySelectorAll('p a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert(`This would navigate to a ${link.textContent.toLowerCase().replace(' ', '-')} page or form. Implement backend for functionality!`);
+        });
     });
 });
